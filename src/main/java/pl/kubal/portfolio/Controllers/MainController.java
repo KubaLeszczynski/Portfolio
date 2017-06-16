@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-/**
- * Created by Lukasz Kolacz on 05.06.2017.
- */
 
 @Controller
 public class MainController {
@@ -35,6 +32,7 @@ public class MainController {
 
         // Oskar
         model.addAttribute("projects", projectRepository.findAll());
+        model.addAttribute("about", true);
 
         return "index";
     }
